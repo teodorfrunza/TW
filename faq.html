@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>contact</title>
+        <link rel="stylesheet" type="text/css" href="faq.css">
+        <script src="jquery-3.2.1.min.js"></script>
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="Container">
+
+            <div class="Titlu">
+                <h1>FAQ</h1>
+            </div>
+
+            <li>
+                <ul>
+                    <a class="faqlink" > <b> Q: Ce trebuie sa aleg la meniul principal? </b> </a>
+                    <div class="content"> A: Guest este pentru vizitatori iar employee pentru angajati.</div>
+                </ul>
+
+                <ul>
+                    <a class="faqlink" > <b> Q: Daca sunt angajat cum imi accesez contul? </b> </a>
+                    <div class="content"> A: Se apasa pe employees la meniu si pe ecran va aparea meniul de login. </div>
+                </ul>
+
+                <ul>
+                    <a class="faqlink" > <b> Q: Daca mi-am uitat parola cum pot sa o recuperez? </b> </a>
+                    <div class="content"> A: Se va completa o cerere de resetare a parolei in incinta penitenciarului. </div>
+                </ul>
+
+                <ul>
+                    <a class="faqlink" > <b> Q: Unde se afla penitenciarul? </b> </a>
+                    <div class="content"> A: Apasand pe butonul "contact" aflat in partea dreapta jos a paginii puteti accesa toate informatiile despre locatie, nr de telefon etc. </div>
+                </ul>
+
+                <ul>
+                    <a class="faqlink" > <b> Q: Care sunt ziele si orele de vizitare? </b> </a>
+                    <div class="content"> A: Condamnatii se pot vizita de luni pana vineri intre orele 15 si 17. </div>
+                </ul>
+
+                <ul>
+                    <a class="faqlink" > <b> Q: Cererea de vizita nu se trimite. Ce trebuie sa fac? </b> </a>
+                    <div class="content"> A: Verificati daca toate spatiile sunt completate si daca informatiile sunt corecte. Daca tot nu merge dati un refresh la pagina. </div>
+                </ul>
+            </li>
+
+
+            <img class="Poza" src="asd.jpg" alt="Prison image">
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.faqlink').click(function(){
+            $(this).next('.content').toggle();
+        });
+    });
+</script>
