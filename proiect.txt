@@ -1,13 +1,14 @@
-P1. Home
-P2. Login - user(U) sau employee(E)
-P3.U Regulament
+P1. Home x
+P2. Login - user(U) sau employee(E) x
+P3.U Regulament x
 P4.U Cerere vizita
 P5.U Acces status detinut - pe baza unui cod - accesare date depsre detinut -> 
 -> P6.U Date despre detinut
++dupa ce pasam user/employee ce apare
 
 P3.E Vizionare detinuti/vizite/vizite per detinuit (select din DB)
 P4.E Formular pentru vizita
 P5.E Afisare statistici
 
-P7.FAQ
-P8.Contact
+P7.FAQ x
+P8.Contact x
