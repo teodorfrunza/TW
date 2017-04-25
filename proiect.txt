@@ -1,21 +1,16 @@
-P1. Home x (T)
-P2. Login - user(U) sau employee(E) x (T)
-P3.U Regulament x (A)
-P4.U Cerere vizita x (A & T)
-P5.U Acces status detinut - pe baza unui cod - accesare date depsre detinut -> 
--> P6.U Date despre detinut x (A)
-*User panel x (A)
+P1. Home
 
-P2.E Vizionare detinuti si completare raport vizita 
-P3.E Vizionare detinuti/vizite/vizite per detinuit (select din DB) 
-P4.E Formular pentru vizita (raport) 
-P5.E Afisare statistici (R)
+P1.U Panel user
+P2.U Regulament
+P3.U Cerere vizita
+P4.U Acces status detinut - pe baza unui cod 
+P5.U Date despre detinut
 
-P7.FAQ x (T)
-P8.Contact x (T)
 
--------
-Total:
- A: 4
- R: 1 -> BACKEND
- T: 5
+P1.E Panel Employee (Vizionare detinuti/vizite/vizite per detinuit (select din DB))
+P2.E LogIn Employee
+P3.E Raport vizita     
+P4.E Afisare statistici
+
+P2.FAQ
+P3.Contact
