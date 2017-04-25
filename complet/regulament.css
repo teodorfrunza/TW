@@ -36,6 +36,7 @@ h1{
 	overflow: auto;
 	position: absolute;
 	z-index: 1;
+	font-size: 2.3vmin;
 }
 .Reg:hover{
 	border: 2px solid #244349;
