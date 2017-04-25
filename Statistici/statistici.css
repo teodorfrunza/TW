@@ -1,0 +1,109 @@
+.Container{
+    position: absolute;
+    display: inline-block;
+    width: 60%;
+    left: 20%;
+    height: 100%;
+    border: 0.5vw solid black;
+
+}
+.Poza{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+h1{
+    position: absolute;
+    top: 6%;
+    font-size: 6vmin;
+    text-align: center;
+    text-wrap: normal;
+    word-wrap: break-word;
+    line-height: 100%;
+    vertical-align: middle;
+    width: 60vw;
+    z-index: 1;
+}
+
+
+.Container2 {
+
+    position: absolute;
+    font-size: 3.5vmin;
+    text-decoration: none;
+    top: 30vh;
+    left: 10vw;
+    width: 37vw;
+    height: 60vh;
+    word-wrap: break-word;
+    display: inline-block;
+    overflow: auto;
+
+
+}
+
+select{
+    margin: 2%;
+    width: 7vw;
+    word-wrap: break-word;
+    font-size: 2vmin;
+    display: inline-block;
+
+}
+
+input[type=text]{
+    width: 15vw;
+    height: 2vh;
+    padding: 1vh 1vw;
+    margin: 1vh;
+    display: inline-block;
+    border: 1px solid #ff8080;
+    font-size: 3 v.min;
+
+
+}
+
+
+
+.Buton2 {
+    margin: 3vh;
+    padding: 3vh 3vw 3vh 3vw;
+    background-color: #669999;
+    border-radius: 7px;
+    top: 80vh;
+    left: 20vw;
+    position: absolute;
+    width: 7vw;
+    height: 2vh;
+    line-height: 0.7em;
+    z-index: 1;
+    display: block;
+}
+
+
+.Buton2:hover {
+    color: #00ffbf;
+    background-color: #004d39;
+}
+
+input[type=submit]{
+    padding: 2vh 2vw 2vh 2vw;
+    margin-top: 10vh;
+    margin-left: 14vw;
+    font-size: 2vmin;
+    text-align: center;
+    color: white;
+    background-color: #669999;
+    border-radius: 7px;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+
+input[type=submit]:hover{
+    color: #00ffbf;
+    background-color: #004d39;
+
+}

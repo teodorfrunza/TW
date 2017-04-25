@@ -1,0 +1,79 @@
+.Container{
+    position: absolute;
+    display: inline-block;
+    width: 60%;
+    left: 20%;
+    height: 100%;
+    border: 0.5vw solid black;
+
+}
+
+.Poza{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 3vmin;
+    color: white;
+}
+
+
+.Buton2 {
+    margin: 3vh;
+    padding: 3vh;
+    background-color: #669999;
+    border-radius: 7px;
+    top: 83%;
+    left: 6%;
+    position: absolute;
+    width: 7vw;
+    height: 2vh;
+    line-height: 0.7em;
+    z-index: 1;
+}
+
+
+.Buton2:hover {
+    color: #00ffbf;
+    background-color: #004d39;
+}
+
+ul {
+    margin: 1vmin;
+    padding: 2vmin;
+    word-wrap: break-word;
+    font-size: 3.5vmin;
+    height: 8%;
+}
+li{
+    z-index: 1;
+    position: absolute;
+    text-decoration: none;
+    list-style: none;
+    top: 7.7%;
+    left: 47%;
+    display: inline-block;
+    height:60vh;
+    width: 30vw;
+
+}
+
+img.imagine {
+    width: 23vw;
+    height: 60vh;
+    position: absolute;
+    left: 7%;
+    top: 12%;
+    z-index:1;
+    display: inline-block;
+
+}
+
+
+
+
