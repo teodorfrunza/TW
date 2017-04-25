@@ -57,6 +57,19 @@ h3{
     width: 58vw;
     z-index: 1;
 }
+h4{
+    position: absolute;
+    top: 56%;
+    left:1%;
+    font-size: 2vmin;
+    text-align: center;
+    text-wrap: normal;
+    word-wrap: break-word;
+    line-height: 100%;
+    vertical-align: middle;
+    width: 58vw;
+    z-index: 1;
+}
 .Container2{
     display: inline-flex;
     text-align: center;
@@ -85,9 +98,9 @@ h3{
     text-align: center;
     position: absolute;
     top: 65vh;
-    left: 21%;
+    left: 9%;
     width: 18vw;
-    height: 6vh;
+    height: 1vh;
     z-index: 1;
 }
 .Container3 a{
@@ -96,7 +109,7 @@ h3{
     background-color: #889498;
     border-radius: 7px;
     text-decoration: none;
-    padding: 3vh 3vw 3vh 3vw;
+    padding: 2vh 2vw 2vh 2vw;
     font-size: 1.6vmin;
     vertical-align: middle;
     border: 1px solid black;
@@ -110,25 +123,50 @@ h3{
     text-align: center;
     position: absolute;
     top: 65vh;
-    left: 51%;
+    left: 35%;
     width: 18vw;
     height: 6vh;
     z-index: 1;
 }
 
 .Container4 a{
+     text-align:center;
+     color: white;
+     background-color: #889498;
+     border-radius: 7px;
+     text-decoration: none;
+     font-size: 1.7vmin;
+    padding: 2vh 2vw 2vh 2vw;
+     vertical-align: middle;
+     border: 1px solid black;
+ }
+
+.Container4 a:hover{
+    color: darkred;
+}
+
+.Container5{
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 65vh;
+    left: 58%;
+    width: 18vw;
+    height: 6vh;
+    z-index: 1;
+}
+.Container5 a{
     text-align:center;
     color: white;
     background-color: #889498;
     border-radius: 7px;
     text-decoration: none;
     font-size: 1.7vmin;
-    padding: 3vh 3.5vw 3vh 3.5vw;
+    padding: 2vh 2vw 2vh 2vw;
     vertical-align: middle;
     border: 1px solid black;
 }
 
-.Container4 a:hover{
+.Container5 a:hover{
     color: darkred;
 }
-
