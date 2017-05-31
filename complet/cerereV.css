@@ -25,11 +25,11 @@
 form{
 	overflow: auto;
 	text-align: left;
-	top: 20vh;
+	top: 15vh;
 	left: 8%;
 	position: absolute;
 	width: 40%;
-	height: 59vh;
+	height: 65vh;
 }
 
 button{
