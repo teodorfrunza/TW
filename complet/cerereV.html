@@ -19,7 +19,7 @@
 <body>
 <div class="Container">
 	<img src="persoana2.png" alt="Avatar" class="avatar">
-	<form action="">
+	<form action="cerereVizita.php" method="POST" id="form1">
 
 
 		<label><b>Nume:</b></label>
@@ -44,31 +44,33 @@
 
 
 		<label><b>Natura vizitei:</b></label>
-		<input type="text" placeholder="Ex: Discutie" name="natura vizitei" required>
+		<input type="text" placeholder="Ex: Discutie" name="natura-vizitei" required>
 
 
 		<label><b>Data:</b></label>
 		<input id="datepicker" name="data" required>
 
-		<label><b>Ora:</b></label>
+		<label for="myList"> <b>Ora:</b></label>
 		<div>
-			<select id = "myList" required>
-				<option value = "1">12:00</option>
-				<option value = "2">13:00</option>
-				<option value = "3">14:00</option>
-				<option value = "4">15:00</option>
+			<select name="ora" id = "myList" form="form1" required>
+				<option value = "12:00">12:00</option>
+				<option value = "13:00">13:00</option>
+				<option value = "14:00">14:00</option>
+				<option value = "15:00">15:00</option>
 			</select>
 		</div>
+
+
+		<label> <b>Poza:</b>
+			<span><input type="file" id="myfile" name="myfile" required></span>
+		</label>
+
 
 		<input class="trimite" type="submit" value="Trimite">
 
 
 	</form>
-	<div class="browse">
-		<label class="filebutton">
-			<span><input type="file" id="myfile" name="myfile"></span>
-		</label>
-	</div>
+
 	<div class="item">
 		<h3> Va rugam completati toate spatiile si verificati de 2 ori inainte sa trimiteti! </h3>
 	</div>

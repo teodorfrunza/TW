@@ -17,10 +17,10 @@
 .avatar {
 	position: absolute;
 	width: 15vw;
-	height: 25vh;
+	height: 28vh;
 	border-radius: 50%;
 	left: 64%;
-	top: 22%;
+	top: 26%;
 }
 form{
 	overflow: auto;
@@ -29,7 +29,8 @@ form{
 	left: 8%;
 	position: absolute;
 	width: 40%;
-	height: 65vh;
+	height: 74vh;
+	overflow-x: hidden;
 }
 
 button{
@@ -49,7 +50,7 @@ button:hover{
 	background-color: green;
 }
 input{
-	border: 1px solid #ff8080;
+
 	display: block;
 	height: 3.5vmin;
 	width: 99%;
@@ -81,14 +82,7 @@ label{
 .Container3 a:hover{
 	color: darkred;
 }
-.browse {
-	text-wrap: normal;
-	display: inline-block;
-	position: absolute;
-	top: 52%;
-	left: 66%;
-	width: 13vw;
-}
+
 .filebutton{
 	display: inline-block;
 	font-size: 2.5vmin;
