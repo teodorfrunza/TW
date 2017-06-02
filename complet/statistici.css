@@ -94,7 +94,7 @@ input[type=submit]{
     font-size: 2vmin;
     text-align: center;
     color: white;
-    background-color: #669999;
+    background-color: #889498;
     border-radius: 7px;
     text-decoration: none;
     vertical-align: middle;
@@ -103,7 +103,6 @@ input[type=submit]{
 
 
 input[type=submit]:hover{
-    color: #00ffbf;
-    background-color: #004d39;
+    color: darkred;
 
 }

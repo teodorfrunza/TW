@@ -105,11 +105,20 @@ label{
 	cursor: pointer;
 }
  .trimite{
-	 margin-top: 30px;
+	 margin: 0.5vw;
+	 width: 25vmin;
+	 height: 4vmin;
+	 font-size: 1.7vmin;
+	 text-align:center;
+	 color: white;
+	 background-color: #889498;
+	 border-radius: 7px;
+	 text-decoration: none;
+	 vertical-align: middle;
+	 border: 1px solid black;
  }
  .trimite:hover{
-	color: darkred;
-	 background-color: #1aa0a7;
+	 color: darkred;
  }
 .item {
 	position: absolute;

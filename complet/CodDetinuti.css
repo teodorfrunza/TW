@@ -12,10 +12,17 @@
     width: 100%;
 
 }
+.Poza2{
+    position: absolute;
+    height: 15%;
+    width: 15%;
+    top: 34%;
+    left: 42%;
+}
 h1{
     position: absolute;
     top: 10%;
-    font-size: 6vmin;
+    font-size: 4.90vmin;
     text-align: center;
     text-wrap: normal;
     word-wrap: break-word;
@@ -25,29 +32,31 @@ h1{
     z-index: 1;
 }
 h2{
-    position: absolute;
-    top: 50%;
-    font-size: 2vmin;
-    text-align: center;
-    text-wrap: normal;
-    word-wrap: break-word;
-    line-height: 100%;
-    vertical-align: middle;
-    width: 60vw;
-    z-index: 1;
-}
+     position: absolute;
+     top: 50%;
+
+     font-size: 2.5vmin;
+     text-align: center;
+     text-wrap: normal;
+     word-wrap: break-word;
+     line-height: 100%;
+     vertical-align: middle;
+     width: 57vw;
+     z-index: 1;
+ }
 h3{
     position: absolute;
-    top: 53%;
-    font-size: 2vmin;
-    text-align: center;
+    top: 54.5%;
+    left:  10.2vw;
+    font-size: 1.8vmin;
     text-wrap: normal;
     word-wrap: break-word;
     line-height: 100%;
     vertical-align: middle;
-    width: 60vw;
+    width: 57vw;
     z-index: 1;
 }
+
 .Container2{
     display: inline-flex;
     text-align: center;
@@ -88,7 +97,7 @@ h3{
     border-radius: 7px;
     text-decoration: none;
     padding: 3vh 4vw 3vh 4vw;
-    font-size: 1.7vmin;
+    font-size: 1.9vmin;
     vertical-align: middle;
     border: 1px solid black;
 }
@@ -113,7 +122,7 @@ h3{
     background-color: #889498;
     border-radius: 7px;
     text-decoration: none;
-    font-size: 1.7vmin;
+    font-size: 1.9vmin;
     padding: 3vh 4.2vw 3vh 4.2vw;
     vertical-align: middle;
     border: 1px solid black;
@@ -122,4 +131,43 @@ h3{
 .Container4 a:hover{
     color: darkred;
 }
+form{
+    text-align: left;
+    top: 57vh;
+    left: 45%;
+    position: absolute;
+    width: 9%;
+    height: 20vh;
+}
+button{
+
+    margin: 0.5vw;
+    width: 10vmin;
+    height: 4vmin;
+    font-size: 1.7vmin;
+    text-align:center;
+    color: white;
+    background-color: #889498;
+    border-radius: 7px;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+button:hover{
+    color: darkred;
+}
+input{
+    display: block;
+    height: 2.5vmin;
+    width: 100%;
+    font-size: 2vmin;
+}
+label{
+    font-size: 2.5vmin;
+}
+
+
+
+
+
 
