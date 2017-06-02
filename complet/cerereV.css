@@ -18,9 +18,8 @@
 	position: absolute;
 	width: 15vw;
 	height: 28vh;
-	border-radius: 50%;
 	left: 64%;
-	top: 26%;
+	top: 28%;
 }
 form{
 	overflow: auto;

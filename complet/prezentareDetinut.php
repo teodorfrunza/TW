@@ -23,20 +23,48 @@
         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
     }
     oci_bind_by_name($stid, ':myid', $var);
-    $r = oci_execute($stid);
-    if (!$r) {
-        $e = oci_error($stid);
-        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+    if(is_numeric($var) == true) {
+        $stid4 = oci_parse($connection, 'SELECT COUNT(ID) as "count" FROM DETINUTI WHERE ID=:codD');
+
+        if (!$stid4) {
+            $e = oci_error($connection);
+            trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+        }
+
+        oci_bind_by_name($stid4, ':codD', $var4);
+        $r4 = oci_execute($stid4);
+        if (!$r4) {
+            $e = oci_error($stid4);
+            trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+        }
+        $row4 = oci_fetch_array($stid4, OCI_ASSOC + OCI_RETURN_LOBS);
+        $count2 = $row4['count'];
+
+        if ($count2 >=1) {
+            $r = oci_execute($stid);
+            if (!$r) {
+                $e = oci_error($stid);
+                trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+            }
+            $row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_LOBS);
+            $nume = $row['NUME'];
+            $prenume = $row['PRENUME'];
+            $varsta = $row['DATA_NASTERE'];
+            $cod = $row['ID'];
+            $durata = $row['DURATA_PEDEAPSA'];
+            $motiv = $row['MOTIV'];
+            $sanatate = $row['SANATATE'];
+            $poza = $row['POZA'];
+        }
+        else {
+            $message = "Nu exista nici un detinut cu acest cod! ";
+            echo "<script type='text/javascript'>alert('$message'); window.location.href = \"CodDetinuti.html\";</script>";
+        }
     }
-    $row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS);
-    $nume=$row['NUME'];
-    $prenume=$row['PRENUME'];
-    $varsta=$row['DATA_NASTERE'];
-    $cod=$row['ID'];
-    $durata=$row['DURATA_PEDEAPSA'];
-    $motiv=$row['MOTIV'];
-    $sanatate=$row['SANATATE'];
-    $poza=$row['POZA']
+    else {
+        $message = "Cod invalid! ";
+        echo "<script type='text/javascript'>alert('$message'); window.location.href = \"CodDetinuti.html\";</script>";
+    }
 ?>
 
 <html>
