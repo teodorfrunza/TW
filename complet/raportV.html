@@ -8,34 +8,27 @@
 </head>
 <body>
 <div class="Container">
-    <div class="form1">
-    <form>
-        <label>Cod vizita:</label>
-        <input type="text" name="cod" placeholder="Ex: 13233" required>
-        <input type="submit" class="submit1" value="Trimite">
-    </form>
-    </div>
 
-    <div class="form2">
-        <form>
-            <label>Rezumatul discutiei:</label>
-            <textarea required></textarea>
-            <br><br>
-            <label>Durata conversatiei:</label>
-            <input type="text" name="ore" placeholder="Ex: 3 ore" required>
-            <br><br>
-            <label>Obiecte date de catre vizitator:</label>
-            <input type="text" name="ob1" placeholder="Ex: un pachet de tigari">
-            <br><br>
-            <label>Obiecte date de catre condamnat:</label>
-            <input type="text" name="ob2" placeholder="Ex: mesaj prietenului X">
-            <br><br>
-            <label>Starea de spirit:</label>
-            <input type="text" name="spirit" placeholder="Ex: calm, vesel" required>
-            <br>
-            <input type="submit" class="submit1" value="Salveaza">
-        </form>
-    </div>
+    <form action="raport.php" method="POST">
+        <label><b>Cod vizita:</b></label>
+        <input type="text" name="cod" placeholder="Ex: 13233" required>
+        <br><br>
+        <label><b>Rezumatul discutiei:</b></label>
+        <textarea maxlength="200" name="rezumat" required></textarea>
+        <br><br>
+        <label><b>Durata conversatiei:</b></label>
+        <input type="text" name="ore" placeholder="Ex: 3 ore" required>
+        <br><br>
+        <label><b>Obiecte date de catre vizitator:</b></label>
+        <input type="text" name="ob1" placeholder="Ex: un pachet de tigari">
+        <br><br>
+        <label><b>Obiecte date de catre condamnat:</b></label>
+        <input type="text" name="ob2" placeholder="Ex: mesaj prietenului X">
+        <br><br>
+        <label><b>Starea de spirit:</b></label>
+        <input type="text" name="spirit" placeholder="Ex: calm, vesel" required>
+        <input type="submit" class="submit" value="Salveaza">
+    </form>
 
     <img class="Poza" src="asd.jpg" alt="Cadran">
 </div>

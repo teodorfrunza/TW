@@ -62,22 +62,22 @@ label{
 
 .Container3{
 	display: inline-flex;
-	text-align: center;
-	position: absolute;
-	bottom: 4vh;
-	right: 6%;
-	width: 14vw;
-	height: 4vh;
-	z-index: 1;
+    text-align: center;
+    position: absolute;
+    bottom: 4vh;
+    left: 75%;
+    width: 14vw;
+    height: 4vh;
+    z-index: 1;
 }
 
 .Container3 a{
 	text-align:right;
-	color: white;
-	text-decoration: none;
-	font-size: 2.5vmin;
-	padding: 10%;
-	vertical-align: middle;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vmin;
+    padding: 10%;
+    vertical-align: middle;
 }
 .Container3 a:hover{
 	color: darkred;

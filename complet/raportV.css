@@ -25,68 +25,17 @@ h1{
     z-index: 1;
 }
 
-.form1{
-    padding: 8vh 2vw;
-    position: absolute;
-    font-size: 3vmin;
-    text-decoration: none;
-    display: inline-block;
-    top: 3vh;
-    left: 13vw;
-    width: 34vw;
-    height: 0;
-
-}
-
-.form1 input[type=text]{
-    padding: 1vh 3vw;
-    height: 2vmin;
-    width: 10vw;
-    font-size: 2vmin;
-    border: 1px solid #ff0200;
-    display: inline-block;
-}
-
-.form1:hover{
-    color: #1a006b;
-}
-
-
-.form1 .submit1{
-    margin: 10px;
-    width: 10vmin;
-    height: 4vmin;
-    font-size: 2vmin;
-    text-align:center;
-    color: white;
-    background-color: #669999;
-    border-radius: 7px;
-    text-decoration: none;
-    vertical-align: middle;
-    border: 1px solid black;
-}
-
-
-.form1 .submit1:hover{
-    color: #00ffbf;
-    background-color: #004d39;
-
-}
-
-.form2 {
+form {
     padding: 3vh 2vw;
     position: absolute;
     font-size: 3vmin;
     text-decoration: none;
     display: inline-block;
-    top: 20vh;
+    top: 8vh;
     left: 4vw;
     width: 40vw;
     height: 0;
-
-
 }
-
 
 textarea {
 
@@ -102,7 +51,7 @@ textarea {
     overflow: auto;
     display: inline-block;
 }
-.form2 input[type=text]{
+form input[type=text]{
     padding: 1vh 3vw;
     height: 2vmin;
     width: 11vw;
@@ -111,9 +60,10 @@ textarea {
     display: inline-block;
 
 }
-.form2 .submit1{
-    margin: 9% 45%;
+form .submit{
+    margin: 7% 45%;
     width: 30%;
+    height: 6vh;
     font-size: 2vmin;
     text-align: center;
     color: white;
@@ -123,5 +73,9 @@ textarea {
     vertical-align: middle;
     border: 1px solid black;
     display: block;
+}
 
+form .submit:hover{
+    color: #00ffbf;
+    background-color: #004d39;
 }
