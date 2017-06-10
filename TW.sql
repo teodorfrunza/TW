@@ -13,7 +13,7 @@ CREATE TABLE DETINUTI (ID NUMBER(10) PRIMARY KEY, NUME VARCHAR2(50) NOT NULL, PR
 /
 CREATE TABLE CEREREVIZITE (ID NUMBER(10) PRIMARY KEY, NUME VARCHAR2(50) NOT NULL, PRENUME VARCHAR2(50) NOT NULL, CNP NUMBER(13) NOT NULL, COD_DETINUT NUMBER(10) NOT NULL, RELATIE VARCHAR2(20) NOT NULL, NATURA_VIZITA VARCHAR2(50) NOT NULL, DATA_VIZITA DATE NOT NULL, ORA VARCHAR2(10) NOT NULL, POZA VARCHAR2(500) NOT NULL);
 /
-CREATE TABLE RAPORTVIZITE (ID NUMBER(10) UNIQUE NOT NULL, DURATA VARCHAR2(50) NOT NULL, OBIECTE_DATE VARCHAR2(200), OBIECTE_PRIMITE VARCHAR2(200), STARE_SPIRIT VARCHAR2(100) NOT NULL, DISCUTIE VARCHAR2(500) NOT NULL);
+CREATE TABLE RAPORTVIZITE (ID NUMBER(10) UNIQUE NOT NULL, DURATA VARCHAR2(50) NOT NULL, OBIECTE_DATE VARCHAR2(200), OBIECTE_PRIMITE VARCHAR2(200), STARE_SPIRIT VARCHAR2(100) NOT NULL, DISCUTIE VARCHAR2(500) NOT NULL, ANGAJAT VARCHAR2(100));
 /
 ALTER TABLE RAPORTVIZITE
   ADD CONSTRAINT vizite_id_fk FOREIGN KEY (ID) 
@@ -50,15 +50,15 @@ INSERT INTO CEREREVIZITE VALUES(4031,'Popescu','Marcel',1831111134698,1018,'Cuno
 INSERT INTO CEREREVIZITE VALUES(4032,'Onica','Dragos',1880713153284,1019,'Amic','Vizita pentru conversatie',TO_DATE('01/24/2017','MM/DD/YYYY'),'12:00','poza10.jpg');
 /
 
-INSERT INTO RAPORTVIZITE VALUES (4023, '20 minute', '2 pachete de tigari, 2 carti, 3 reviste ',   'poza', 'fericit', 'In aceasta vizita s-a discutat despre copii detinutului si despre educatia primita acasa a acestora.');
-INSERT INTO RAPORTVIZITE VALUES (4024, '30 minute', '3 kg de carne, 2 ccrembusti ',   '', 'suparat', 'In aceasta vizita s-a discutat despre durata pana la expirarea pedepsei si despre starea de spirit a penintenciarului in general.');
-INSERT INTO RAPORTVIZITE VALUES (4025, '1 ora',     '4 pachete de tigari, 2 manusi, 3 prajituri ','', 'neutru', 'In aceasta vizita s-a discutat despre salteaua incomoda a detinutului, despre meciul de fotbal de aseara si despre durata pana la expirarea pedepsei.');
-INSERT INTO RAPORTVIZITE VALUES (4026, '1 orea',    '2 kg de struguri, o tableta ','', 'fericit', 'In aceasta vizita s-a discutat despre mama detinutului, despre modul in care este tratat in penintenciar si despre durata pana la expirarea pedepsei.');
-INSERT INTO RAPORTVIZITE VALUES (4027, '25 minute', '5 sticle de suc, 2 carti, 3 boluri ', 'felicitare', 'ofticat', 'In aceasta vizita s-a discutat despre colegul agitat al detinutului, despre rudele apropriate si despre copii detinutului');
-INSERT INTO RAPORTVIZITE VALUES (4028, '32 minute', '6 pachete de tigari, 4 carti ', '', 'fericit', 'In aceasta vizita s-a discutat despre mama detinutului, despre copii detinutului si despre durata pana la expirarea pedepsei.');
-INSERT INTO RAPORTVIZITE VALUES (4029, '1 ora',     '1 litru de cola, 5 carti, 3 prajituri ',  '', 'suparat', 'In aceasta vizita s-a discutat despre copii detinutului si despre mama acestora.');
-INSERT INTO RAPORTVIZITE VALUES (4030, '21 minute', '2 mere, 12 carti, 2 prajituri ', '', 'depresiv', 'In aceasta vizita s-a discutat despre despre durata pana la expirarea pedepsei.');
-INSERT INTO RAPORTVIZITE VALUES (4031, '32 minute', '3 pachete de tigari, 2 pixuri, 3 torturi ', '', 'nervos', 'In aceasta vizita s-a discutat despre imposibilitatea dezvoltarii personale despre nepotii detinutului impreuna cu parintii acestora si despre durata pana la expirarea pedepsei.');
-INSERT INTO RAPORTVIZITE VALUES (4032, '1 ora',     '5 cutii de ananas, 2 carti, 3 placinte ',  'poza', 'confuz', 'In aceasta vizita s-a discutat despre copii detinutului si despre munca la care este supus in penintenciar.');
+INSERT INTO RAPORTVIZITE VALUES (4023, '20 minute', '2 pachete de tigari, 2 carti, 3 reviste ',   'poza', 'fericit', 'In aceasta vizita s-a discutat despre copii detinutului si despre educatia primita acasa a acestora.', 'admin');
+INSERT INTO RAPORTVIZITE VALUES (4024, '30 minute', '3 kg de carne, 2 ccrembusti ',   '', 'suparat', 'In aceasta vizita s-a discutat despre durata pana la expirarea pedepsei si despre starea de spirit a penintenciarului in general.', 'admin');
+INSERT INTO RAPORTVIZITE VALUES (4025, '1 ora',     '4 pachete de tigari, 2 manusi, 3 prajituri ','', 'neutru', 'In aceasta vizita s-a discutat despre salteaua incomoda a detinutului, despre meciul de fotbal de aseara si despre durata pana la expirarea pedepsei.', 'admin');
+INSERT INTO RAPORTVIZITE VALUES (4026, '1 orea',    '2 kg de struguri, o tableta ','', 'fericit', 'In aceasta vizita s-a discutat despre mama detinutului, despre modul in care este tratat in penintenciar si despre durata pana la expirarea pedepsei.', 'admin');
+INSERT INTO RAPORTVIZITE VALUES (4027, '25 minute', '5 sticle de suc, 2 carti, 3 boluri ', 'felicitare', 'ofticat', 'In aceasta vizita s-a discutat despre colegul agitat al detinutului, despre rudele apropriate si despre copii detinutului', 'admin');
+INSERT INTO RAPORTVIZITE VALUES (4028, '32 minute', '6 pachete de tigari, 4 carti ', '', 'fericit', 'In aceasta vizita s-a discutat despre mama detinutului, despre copii detinutului si despre durata pana la expirarea pedepsei.', 'admin');
+INSERT INTO RAPORTVIZITE VALUES (4029, '1 ora',     '1 litru de cola, 5 carti, 3 prajituri ',  '', 'suparat', 'In aceasta vizita s-a discutat despre copii detinutului si despre mama acestora.', 'admin');
+INSERT INTO RAPORTVIZITE VALUES (4030, '21 minute', '2 mere, 12 carti, 2 prajituri ', '', 'depresiv', 'In aceasta vizita s-a discutat despre despre durata pana la expirarea pedepsei.', 'admin');
+INSERT INTO RAPORTVIZITE VALUES (4031, '32 minute', '3 pachete de tigari, 2 pixuri, 3 torturi ', '', 'nervos', 'In aceasta vizita s-a discutat despre imposibilitatea dezvoltarii personale despre nepotii detinutului impreuna cu parintii acestora si despre durata pana la expirarea pedepsei.', 'admin');
+INSERT INTO RAPORTVIZITE VALUES (4032, '1 ora',     '5 cutii de ananas, 2 carti, 3 placinte ',  'poza', 'confuz', 'In aceasta vizita s-a discutat despre copii detinutului si despre munca la care este supus in penintenciar.', 'admin');
 /
 COMMIT;
