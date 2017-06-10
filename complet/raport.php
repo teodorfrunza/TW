@@ -15,6 +15,8 @@ $connection = oci_connect(
     $connection_string
 );
 
+session_start();
+		
 $var1 = $_POST['cod'];
 $var2 = $_POST['rezumat'];
 $var3 = $_POST['ore'];
@@ -61,7 +63,7 @@ if(is_numeric($var1)==true) {
         $row3= oci_fetch_array($stid3, OCI_ASSOC + OCI_RETURN_LOBS);
         $count2 = $row3['count'];
         if ($count2 == 0) {
-            $stid2 = oci_parse($connection, 'INSERT INTO RAPORTVIZITE VALUES (:id,:rezumat,:ore,:ob1,:ob2,:spirit)');
+            $stid2 = oci_parse($connection, 'INSERT INTO RAPORTVIZITE VALUES (:id,:rezumat,:ore,:ob1,:ob2,:spirit,:angajat)');
             if (!$stid2) {
                 $e = oci_error($connection);
                 trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -74,6 +76,7 @@ if(is_numeric($var1)==true) {
             oci_bind_by_name($stid2, ':ob1', $var4);
             oci_bind_by_name($stid2, ':ob2', $var5);
             oci_bind_by_name($stid2, ':spirit', $var6);
+			oci_bind_by_name($stid2, ':angajat', $_SESSION['login_user']);
 
             $r1 = oci_execute($stid2);
             if (!$r1) {
