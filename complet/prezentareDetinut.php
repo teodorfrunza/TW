@@ -31,7 +31,8 @@
             trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
         }
 
-        oci_bind_by_name($stid4, ':codD', $var4);
+        oci_bind_by_name($stid4, ':codD', $var);
+
         $r4 = oci_execute($stid4);
         if (!$r4) {
             $e = oci_error($stid4);
@@ -40,8 +41,12 @@
         $row4 = oci_fetch_array($stid4, OCI_ASSOC + OCI_RETURN_LOBS);
         $count2 = $row4['count'];
 
-        if ($count2 >=1) {
-            $r = oci_execute($stid);
+        if ($count2 == 0) {
+            $message = "Nu exista nici un detinut cu acest cod! ";
+            echo "<script type='text/javascript'>alert('$message'); window.location.href = \"CodDetinuti.html\";</script>";
+        }
+        else {
+			$r = oci_execute($stid);
             if (!$r) {
                 $e = oci_error($stid);
                 trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -55,10 +60,6 @@
             $motiv = $row['MOTIV'];
             $sanatate = $row['SANATATE'];
             $poza = $row['POZA'];
-        }
-        else {
-            $message = "Nu exista nici un detinut cu acest cod! ";
-            echo "<script type='text/javascript'>alert('$message'); window.location.href = \"CodDetinuti.html\";</script>";
         }
     }
     else {
