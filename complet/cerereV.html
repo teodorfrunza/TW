@@ -19,7 +19,9 @@
 <body>
 <div class="Container">
 	<img src="persoana2.png" alt="Avatar" class="avatar">
-	<form action="cerereVizita.php" method="POST" id="form1">
+
+	<iframe name="frame" style="display:none;"></iframe>
+	<form action="cerereVizita.php" method="POST" id="form1" target="frame" enctype="multipart/form-data">
 
 
 		<label><b>Nume:</b></label>
@@ -62,7 +64,7 @@
 
 
 		<label> <b>Poza:</b>
-			<span><input type="file" id="myfile" name="myfile" required></span>
+			<span><input type="file" id="fileToUpload" name="fileToUpload" required ></span>
 		</label>
 
 		<br>
