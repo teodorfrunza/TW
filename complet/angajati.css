@@ -32,8 +32,8 @@ form{
 
 button{
     margin: 10px;
-    width: 22vmin;
-    height: 4vmin;
+    width: 12vw;
+    height: 4vh;
     font-size: 2vmin;
     text-align:center;
     color: white;
@@ -42,6 +42,8 @@ button{
     text-decoration: none;
     vertical-align: middle;
     border: 1px solid black;
+    left: 5vw;
+    position: absolute;
 
 }
 button:hover{
@@ -86,15 +88,9 @@ a{
     color: white;
 }
 
-.login{
-    position: absolute;
-    left: 5.6vw;
-    top: 16vh;
-}
 
 .parolaUitata {
-    top:13.5vh;
-    position: absolute;
+    font-size: 2.3vmin;
     color: black;
 }
 
