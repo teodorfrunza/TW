@@ -34,6 +34,8 @@ if (!$r) {
 $row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS);
 $count = $row['count'];
 if ($count == 1) {
+	session_start();
+	$_SESSION['login_user'] = $var1;
     header("location: employPanel.html");
 }
 else{
