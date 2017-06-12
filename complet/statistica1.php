@@ -1,5 +1,4 @@
 <?php
-
 //Oracle DB user name
 $username = 'TW';
 
@@ -16,74 +15,30 @@ $connection = oci_connect(
     $connection_string
 );
 
-$S1 = 'SANATOS';
-$query= oci_parse($connection, 'SELECT COUNT(ID) as "count" FROM DETINUTI WHERE SANATATE LIKE :S1 ');
+$stid = oci_parse($connection, 'SELECT sanatate as "Sanatate" , COUNT(sanatate) as "Count" FROM DETINUTI group by sanatate');
+if (!$stid) {
+    $e = oci_error($connection);
+    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+}
 
+$r = oci_execute($stid);
+if (!$r) {
+    $e = oci_error($stid);
+    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+}
 
-
-$rows = array();
-$table = array();
-$table['cols'] = array(
-
-    array('label' => 'sanatate', 'type' => 'varchar2'),
-    array('label' => 'nume', 'type' => 'varchar2')
-
-);
-
-if (is_array($query)) {
-    foreach($query as $que) {
-
-        $temp = array();
-        $temp[] = array('v' => (string) $que['durata_pedeapsa']);
-        $temp[] = array('v' => (string) $que ['nume']);
-        $rows[] = array('c' => $temp);
-    }}
-
-$table['rows'] = $rows;
-
-
-$jsonTable = json_encode($table);
-
-//print $jsonTable;
-//echo $jsonTable;
-
-
-
+# set heading
+$data[0] = array('Sanatate','Count');
+$i=1;
+while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
+    $san = $row['Sanatate'];
+    $count = $row['Count'];
+    $data[$i] = array($san,(int)$count);
+    $i = $i +1;
+}
+echo json_encode($data);
+oci_close($connection);
 ?>
 
 
 
-<html>
-<head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-
-            var data = google.visualization.arrayToDataTable([
-                ['Task', ''],
-                ['Sanatosi',    5 ],
-                ['GRIPAT',      1],
-                ['SINDROM TOURETTE',  1],
-                ['TUBERCULOZA', 1],
-                ['HEMOROIZI', 1],
-                ['HEPATITCA C',    1]
-            ]);
-
-            var options = {
-                title: 'Statistica sanatate detinuti',
-                is3D: true,
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-            chart.draw(data, options);
-        }
-    </script>
-</head>
-<body>
-<div id="piechart" style="width: 140vw;  height: 100vh;"></div>
-</body>
-</html>

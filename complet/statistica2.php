@@ -1,5 +1,4 @@
 <?php
-
 //Oracle DB user name
 $username = 'TW';
 
@@ -16,78 +15,34 @@ $connection = oci_connect(
     $connection_string
 );
 
-$S1 = 'SANATOS';
-$query= oci_parse($connection, 'SELECT COUNT(ID) as "count" FROM DETINUTI WHERE SANATATE LIKE :S1 ');
+$stid = oci_parse($connection, 'SELECT to_number(substr(durata_pedeapsa,0,1)) as "pedeapsa" , COUNT(DURATA_PEDEAPSA) as "count" FROM DETINUTI group by substr(durata_pedeapsa,0,1)');
+if (!$stid) {
+    $e = oci_error($connection);
+    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+}
 
+$r = oci_execute($stid);
+if (!$r) {
+    $e = oci_error($stid);
+    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+}
 
+# set heading
+$data = array();
 
-$rows = array();
-$table = array();
-$table['cols'] = array(
-
-    array('label' => 'sanatate', 'type' => 'varchar2'),
-    array('label' => 'nume', 'type' => 'varchar2')
-
+$data['cols'] = array(
+    array('label' => 'Durata pedeapsa', 'type' => 'string'),
+    array('label' => 'count', 'type' => 'number')
 );
 
-if (is_array($query)) {
-    foreach($query as $que) {
+$data['rows'] = array();
+while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false){
+    $data['rows'][] = array('c' => array(
+        array('v' => (string) $row['pedeapsa']),
+        array('v' => (int) $row['count'])
+    ));
+}
+echo json_encode($data);
 
-        $temp = array();
-        $temp[] = array('v' => (string) $que['durata_pedeapsa']);
-        $temp[] = array('v' => (string) $que ['nume']);
-        $rows[] = array('c' => $temp);
-    }}
-
-$table['rows'] = $rows;
-
-
-$jsonTable = json_encode($table);
-
-//print $jsonTable;
-//echo $jsonTable;
-
-
-
+oci_close($connection);
 ?>
-
-
-
-<html>
-<head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-
-            var data = google.visualization.arrayToDataTable([
-                ['Task', ''],
-                ['1 AN',  0],
-                ['2 ANI', 2],
-                ['3 ANI', 3],
-                ['4 ANI', 1],
-                ['5 ANI', 1],
-                ['6 ANI', 0],
-                ['7 ANI', 2],
-                ['8 ANI', 0],
-                ['9 ANI', 0],
-                ['10 ANI', 0],
-            ]);
-
-            var options = {
-                title: 'Statistica pedepsei detinutului',
-                is3D: true,
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-            chart.draw(data, options);
-        }
-    </script>
-</head>
-<body>
-<div id="piechart" style="width: 140vw;  height: 100vh;"></div>
-</body>
-</html>
