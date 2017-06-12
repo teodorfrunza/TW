@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Deton - Scholary Raport</title>
+    <link rel="stylesheet" href="http://scholarly.vernacular.io/scholarly.css">
+</head>
+<body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+<header>
+    <p class="title">Deton - Scholary Raport</p>
+</header>
+<article id="article1" typeof="schema:ScholarlyArticle" resource="#">
+    <h1>Detention Monitoring Tool</h1>
+
+    <section>
+        <ol>
+            <li property="schema:author" typeof="sa:ContributorRole">
+                <a property="schema:author" href="https://github.com/teodorfrunza" typeof="schema:Person">
+                    <span property="schema:givenName">Teodor-Octavian</span>
+                    <span property="schema:familyName">Frunza</span>
+                </a>
+                <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+                </sup>
+            </li>
+
+            <li property="schema:contributor" typeof="sa:ContributorRole">
+                <a property="schema:contributor" href="https://github.com/allexrosca" typeof="schema:Person">
+                    <span property="schema:givenName">Alexandru</span>
+                    <span property="schema:familyName">Rosca</span>
+                </a>
+            </li>
+
+            <li property="schema:contributor" typeof="sa:ContributorRole">
+                <a property="schema:contributor" href="https://github.com/gavrilita1" typeof="schema:Person">
+                    <span property="schema:givenName">Rolland Flavius</span>
+                    <span property="schema:familyName">Gavrilita</span>
+                </a>
+            </li>
+        </ol>
+        <!-- The affiliation list -->
+        <ol>
+            <a href="https://www.info.uaic.ro/bin/Main/">
+                <span property="schema:name">Universitatea Alexandru Ioan Cuza, Facultatea de Informatica Iasi</span>
+            </a>
+        </ol>
+    </section>
+
+    <section typeof="sa:Abstract" id="abstract">
+        <h2>Cuprins</h2>
+        <p>1.Descriere</p>
+        <p>2.Tehnologii si limbaje utilizate</p>
+        <p>3.Diagrama baza de date + diagrama use case</p>
+        <p>4.Atributii</p>
+        <p>5.Retrospectiva</p>
+        <p>6.Bibliografie</p>
+    </section>
+
+    <section typeof="sa:MaterialsAndMethods">
+        <h2>1. Descriere</h2>
+        <aside typeof="schema:WPSideBar">
+            <p>Aplicatia noastra de tip Web a fost construita atat pentru familiile si pentru prietenii detinutilor, cat
+                si pentru angajatii inchisorii.</p>
+            <p>Pentru familii si prieteni, am creat o interfata ce permite crearea unor cereri de vizita sau accesul la
+                anumite date despre detinut. Din cauza securitatii inchisorii totul se face
+                pe baza unor coduri generate si expediate familiei la momentul incarcerarii.</p>
+            <p>Pentru angajatii inchisorii (gardieni, directorul inchisorii), am creat o interfata ce permite
+                completarea unor raporturi legate de vizitele primite de catre detinuti. De
+                asemenea acestia pot vizualiza starea unui detinut tot pe baza de cod.</p>
+            <p>La pagina de login avem si un cont special (admin) ce are aceleasi functionalitati ca cele mentionate mai
+                sus (pentru gardieni) plus abilitatea de a genera statistici din baza de date.</p>
+        </aside>
+    </section>
+
+    <section typeof="sa:MaterialsAndMethods">
+        <h2>2. Tehnologii si limbaje utilizate</h2>
+        <aside typeof="schema:WPSideBar">
+            <p>In alcatuirea aplicatiei noastre am folosit urmatoarele tehnologii si limbaje de programare:</p>
+            <ol>
+                <li>
+                    HTML5 / CSS3 / PHP (PhpStorm)
+                </li>
+                <li>
+                    ORACLE (SQLDeveloper) - Database
+                </li>
+                <li>
+                    JSON , Google Charts
+                </li>
+                <li>
+                    iCalendar
+                </li>
+                <li>
+                    GitHub - repository
+                </li>
+                <li>
+                    Trello - planificare
+                </li>
+            </ol>
+        </aside>
+    </section>
+
+    <section typeof="sa:MaterialsAndMethods">
+        <h2>3. Diagrame</h2>
+        <figure typeof="sa:Image">
+            <figcaption>Arhitectura bazei de date</figcaption>
+            <img class="imag" src="DB.png">
+        </figure>
+        <figure typeof="sa:Image">
+            <figcaption>Diagrama use case</figcaption>
+            <img class="imag" src="UC.png">
+        </figure>
+    </section>
+
+    <section typeof="sa:MaterialsAndMethods">
+
+        <h2>4. Atributii</h2>
+        <figure typeof="sa:Table">
+            <table>
+                <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Task</th>
+                </tr>
+                </thead>
+                <tr>
+                    <th>Frunza Teodor</th>
+                    <th>Front end + Back End + Oracle DB + Google Charts + Raport + Coordonation + Trello</th>
+                </tr>
+                <tr>
+                    <th>Rosca Alexandru</th>
+                    <th>Front end + Back End + Oracle DB + iCalendar + Trello</th>
+                </tr>
+                <tr>
+                    <th>Gavrilita Rolland</th>
+                    <th>Front end + Google Charts + Oracle DB + Trello</th>
+                </tr>
+            </table>
+        </figure>
+    </section>
+
+    <section typeof="sa:MaterialsAndMethods">
+
+        <h2>4. Retrospectiva</h2>
+        <figure typeof="sa:Table">
+            <table>
+                <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Stare</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                </tr>
+                </thead>
+                <tr>
+                    <th>Frunza Teodor</th>
+                    <th>&#9733 &#9733 &#9733 &#9733 &#9734</th>
+                    <th>Teamwork. Lucruri noi, interesante.</th>
+                    <th>Mai multa coordonare.</th>
+                </tr>
+                <tr>
+                    <th>Rosca Alexandru</th>
+                    <th>&#9733 &#9733 &#9733 &#9734 &#9734</th>
+                    <th>Limbaje noi de programare.</th>
+                    <th>Nopti nedormite.</th>
+                </tr>
+                <tr>
+                    <th>Gavrilita Rolland</th>
+                    <th>&#9733 &#9733 &#9733 &#9733 &#9734</th>
+                    <th>Colaborare. Dedicare. Spirit prietenesc.</th>
+                    <th>Organizarea proasta a timpului.</th>
+                </tr>
+            </table>
+        </figure>
+    </section>
+
+    <section typeof="sa:ReferenceList">
+        <h2>5. Bibliografie</h2>
+        <ol>
+            <li typeof="schema:ScholarlyArticle" resource="https://gist.github.com/jakebellacera/635416">
+            <span property="schema:author" typeof="schema:Person">
+                <span property="schema:familyName">Bellacera</span>
+                <span property="schema:givenName">Jake</span>
+            </span>.
+                <cite property="schema:name">PHP to ICS.</cite>
+                <span property="schema:isPartOf" typeof="schema:PublicationVolume">
+                    <span property="schema:isPartOf" typeof="schema:Periodical">
+                        <span property="schema:name">GitHub.</span>
+                    </span>
+                </span>
+            </li>
+            <li typeof="schema:ScholarlyArticle" resource="https://stackoverflow.com/questions/44499177/json-ajax-problems?noredirect=1#comment75992269_44499177">
+            <span property="schema:author" typeof="schema:Person">
+                <span property="schema:familyName">Saini</span>
+                <span property="schema:givenName">R</span>.
+                <span property="schema:givenName">K</span>. ,
+                <span property="schema:familyName">shubham</span>
+                <span property="schema:givenName">715</span>. ,
+                <span property="schema:familyName">White</span>
+                <span property="schema:givenName">Hat</span>
+            </span>.
+                <cite property="schema:name">Intrebari in legatura cu JSON si $ajax.</cite>
+                <span property="schema:isPartOf" typeof="schema:PublicationVolume">
+                    <span property="schema:isPartOf" typeof="schema:Periodical">
+                        <span property="schema:name">StackOverflow.</span>
+                    </span>
+                </span>
+            </li>
+            <li typeof="schema:ScholarlyArticle" resource="https://pixabay.com/">
+                <cite property="schema:name">Imagini cu drept de reutilizare.</cite>
+                <span property="schema:isPartOf" typeof="schema:PublicationVolume">
+                    <span property="schema:isPartOf" typeof="schema:Periodical">
+                        <span property="schema:name">PixAbay.</span>
+                    </span>
+                </span>
+            </li>
+            <li typeof="schema:ScholarlyArticle" resource="https://www.google.ro/search?q=google+images&hl=ro&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjG5P2_gLnUAhVEVhQKHYLaCsAQ_AUIBigB&biw=1920&bih=947#q=google+images&hl=ro&tbm=isch&tbs=sur:fc">
+                <cite property="schema:name">Imagini cu drept de reutilizare.</cite>
+                <span property="schema:isPartOf" typeof="schema:PublicationVolume">
+                    <span property="schema:isPartOf" typeof="schema:Periodical">
+                        <span property="schema:name">Google images.</span>
+                    </span>
+                </span>
+            </li>
+        </ol>
+    </section>
+</article>
+</body>
