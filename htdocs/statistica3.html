@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Statistica varsta</title>
+    <!-- Load jQuery -->
+    <link rel="stylesheet" type="text/css" href="css/statisticaGenerala.css">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js">
+    </script>
+    <script src="librarii/jquery.min.js"></script>
+    <script src="librarii/jquery-ui.min.js"></script>
+    <!-- Load Google JSAPI -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            callback: drawChart,
+            packages: ['corechart']
+        });
+
+        function drawChart() {
+            $.ajax({
+                url: "php/statistica3.php",
+                dataType: "json"
+            }).done(function (jsonData) {
+                var data = new google.visualization.DataTable(jsonData);
+                var options = {is3D: true};
+                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
+            });
+        }
+    </script>
+</head>
+
+<body>
+<div class="Container">
+    <h1> STATISTICA VARSTEI DETINUTILOR </h1>
+    <div class="Container2">
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div id="chart_div"></div>
+    <img class="Poza" src="poze/backgroundSters.jpg" alt="Imagine inchisoare">
+</div>
+</body>
+
+</html>
+

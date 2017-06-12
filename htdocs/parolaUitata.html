@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resetare Parola</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/parolaUitata.css">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="librarii/jquery.min.js"></script>
+    <script src="librarii/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+</head>
+
+<body>
+<div class="Container">
+    <h1><b>Resetare parola</b></h1>
+    <form action="php/parolaUitata.php" method="POST" id="form1">
+        <label><b>User angajat:</b></label>
+        <input type="text" placeholder="Ex: GUARD1982" name="username" required>
+        <label><b>Parola noua:</b></label>
+        <input type="text" placeholder="Ex: parola" name="parola" required>
+        <label for="myList"> <b>Intrebare:</b></label>
+        <div>
+            <select name="intrebare" id="myList" form="form1" required>
+                <option value="Care e numele scolii tale primare?">Care e numele scolii tale primare?</option>
+                <option value="Care e numele primului tau animal de casa?">Care e numele primului tau animal de casa?
+                </option>
+                <option value="Care este orasul in care te-ai nascut?">Care este orasul in care te-ai nascut?</option>
+                <option value="Care este filmul tau preferat?">Care este filmul tau preferat?</option>
+                <option value="Care este artistul tau favorit?">Care este artistul tau favorit?</option>
+            </select>
+        </div>
+        <label><b>Raspuns:</b></label>
+        <input type="text" placeholder="Ex: Iasi" name="raspuns" required>
+        <br>
+        <input class="trimite" type="submit" value="Trimite">
+    </form>
+    <div class="Container3">
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <img class="Poza" src="../poze/backgroundSters.jpg" alt="Imagine inchisoare">
+</div>
+</body>
+
+</html>

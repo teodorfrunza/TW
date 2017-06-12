@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Creare cont</title>
+    <link rel="stylesheet" type="text/css" href="css/creareCont.css">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="librarii/jquery.min.js"></script>
+    <script src="librarii/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+</head>
+
+<body>
+<div class="Container">
+    <h1>Creare cont</h1>
+    <form action="php/creareCont.php" method="POST" id="form1">
+        <label><b>Username: </b></label>
+        <input type="text" name="username" placeholder="Ex: gigel22" maxlength="15" required>
+        <label><b>Parola: </b></label>
+        <input type="text" name="parola" placeholder="Ex: 1234g" maxlength="20" required>
+        <label><b>Nume: </b></label>
+        <input type="text" name="nume" placeholder="Ex: Hristodor" maxlength="20" required>
+        <label><b>Prenume: </b></label>
+        <input type="text" name="prenume" placeholder="Ex: Gigel" maxlength="30" required>
+        <label><b>Cnp: </b></label>
+        <input type="text" name="cnp" placeholder="Ex: 1850221152304" maxlength="13" required>
+        <label><b>Data nasterii: </b></label>
+        <input id="datepicker" name="data" required>
+        <label for="myList"> <b>Intrebare:</b></label>
+        <div>
+            <select name="intrebare" id="myList" form="form1" required>
+                <option value="Care e numele scolii tale primare?">Care e numele scolii tale primare?</option>
+                <option value="Care e numele primului tau animal de casa?">Care e numele primului tau animal de casa?
+                </option>
+                <option value="Care este orasul in care te-ai nascut?">Care este orasul in care te-ai nascut?</option>
+                <option value="Care este filmul tau preferat?">Care este filmul tau preferat?</option>
+                <option value="Care este artistul tau favorit?">Care este artistul tau favorit?</option>
+            </select>
+        </div>
+        <label><b>Raspuns: </b></label>
+        <input type="text" name="raspuns" placeholder="Ex: acasa (maxim 50 de caractere)" maxlength="50" required>
+        <input class="trimite" type="submit" value="Creare">
+    </form>
+    <img class="Poza" src="poze/backgroundSters.jpg" alt="Imagine inchisoare">
+</div>
+</body>
+
+</html>

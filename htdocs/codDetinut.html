@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>codDetinut</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/codDetinut.css">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+</head>
+
+<body>
+<div class="Container">
+    <h1> Cerere informatii detinut</h1>
+    <img class="Poza" src="poze/backgroundSters.jpg" alt="Imagine inchisoare">
+    <img class="Poza2" src="poze/detinut.png" alt="image">
+    <div class="Container2">
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <h2>Pentru a afla informatii despre un detinut va rugam introduceti codul acestuia in casuta de mai jos.</h2>
+    <form action="php/informatiiDetinut.php" method="post">
+        <input type="text" placeholder="Ex: 1234" name="COD" required>
+        <button type="submit">Trimiteti</button>
+    </form>
+</div>
+</body>
+
+</html>
+
