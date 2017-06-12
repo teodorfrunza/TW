@@ -1,0 +1,37 @@
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>200</x><y>110</y><w>230</w><h>150</h></coordinates><panel_attributes>LOGIN
+--
+   * Username : VARCHAR2(50)
+   * Password : VARCHAR2(50)
+   * Nume : VARCHAR2(100)
+   * Prenume : VARCHAR2(100)
+   * Data_nastere : DATE
+   * Intrebare : VARCHAR2(200)
+   * Raspuns : VARCHAR2(200)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>100</y><w>240</w><h>160</h></coordinates><panel_attributes>DETINUTI
+--
+ P  * Id : NUMBER(10)
+      * Nume : VARCHAR2(50)
+      * Prenume : VARCHAR2(50)
+      * Data_nastere : DATE
+      * Durata_pedeapsa : VARCHAR2(10)
+      * Motiv : VARCHAR2(100)
+      * Sanatate : VARCHAR2(500)
+      * Poza : VARCHAR2(100)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>470</y><w>240</w><h>190</h></coordinates><panel_attributes>CEREREVIZITE
+--
+ P  * Id : NUMBER(10)
+      * Nume : VARCHAR2(50)
+      * Prenume : VARCHAR2(50)
+      * Cnp : NUMBER(13)
+ F   * Cod_detinut : NUMBER(10)
+      * Relatie : VARCHAR2(50)
+      * Natura_vizita : VARCHAR2(50)
+      * Data_vizita : DATE
+      * Ora : VARCHAR2(10)
+      * Poza : VARCHAR2(500)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>490</y><w>230</w><h>140</h></coordinates><panel_attributes>RAPORTVIZITE
+--
+ F  * Id : NUMBER(10)
+      * Durata : VARCHAR2(50)
+      * Obiecte_date : VARCHAR2(200)
+      * Obiecte_primite : VARCHAR2(200)
+      * Stare_spirit : VARCHAR2(100)
+      * Discutie : VARCHAR2(500)
+      * Angajat : VARCHAR2(100)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>540</y><w>330</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;310;20</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>250</y><w>30</w><h>240</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;220;10;10</additional_attributes></element></diagram>
