@@ -15,7 +15,7 @@ $connection = oci_connect(
     $connection_string
 );
 
-$stid = oci_parse($connection, 'SELECT to_number(substr(DATA_NASTERE,8,2)) as "Varsta" , COUNT(substr(DATA_NASTERE,8,2)) as "count" FROM DETINUTI group by substr(DATA_NASTERE,8,2)');
+$stid = oci_parse($connection, 'SELECT 2017-to_number(19||substr(data_nastere,8,2)) as "Varsta" , COUNT(substr(DATA_NASTERE,8,2)) as "count" FROM DETINUTI group by substr(DATA_NASTERE,8,2)');
 if (!$stid) {
     $e = oci_error($connection);
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -28,15 +28,19 @@ if (!$r) {
 }
 
 # set heading
-$data[0] = array('Varsta','count');
-$i=1;
-while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
-    $Varsta = $row['Varsta'];
-    $count = $row['count'];
-    $data[$i] = array($Varsta,(int)$count);
-    $i = $i +1;
-}
+$data = array();
+
+$data['cols'] = array(
+    array('label' => 'Varsta', 'type' => 'string'),
+    array('label' => 'count', 'type' => 'number')
+);
+
+$data['rows'] = array();
+while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false)
+    $data['rows'][] = array('c' => array(
+        array('v' => (string) $row['Varsta']),
+        array('v' => (int) $row['count'])
+    ));
 echo json_encode($data);
 oci_close($connection);
-
 ?>

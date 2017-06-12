@@ -28,14 +28,19 @@ if (!$r) {
 }
 
 # set heading
-$data[0] = array('Sanatate','Count');
-$i=1;
-while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
-    $san = $row['Sanatate'];
-    $count = $row['Count'];
-    $data[$i] = array($san,(int)$count);
-    $i = $i +1;
-}
+$data = array();
+
+$data['cols'] = array(
+    array('label' => 'Sanatate', 'type' => 'string'),
+    array('label' => 'count', 'type' => 'number')
+);
+
+$data['rows'] = array();
+while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false)
+    $data['rows'][] = array('c' => array(
+        array('v' => (string) $row['Sanatate']),
+        array('v' => (int) $row['Count'])
+    ));
 echo json_encode($data);
 oci_close($connection);
 ?>

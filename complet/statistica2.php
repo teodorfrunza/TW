@@ -36,13 +36,11 @@ $data['cols'] = array(
 );
 
 $data['rows'] = array();
-while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false){
+while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false)
     $data['rows'][] = array('c' => array(
         array('v' => (string) $row['pedeapsa']),
         array('v' => (int) $row['count'])
     ));
-}
 echo json_encode($data);
-
 oci_close($connection);
 ?>
