@@ -14,16 +14,37 @@
 }
 .formular{
     position:absolute;
-    top: 50vh;
-    left: 40vw;
+    top: 55vh;
+    left: 30vw;
 }
 
+.formular2{
+    position:absolute;
+    top: 55vh;
+    left: 57vw;
+}
+
+
 .submit{
-    background-color: red;
+    margin: 0.5vw;
+    width: 20vmin;
+    height: 4vmin;
+    font-size: 1.7vmin;
+    text-align:center;
+    color: white;
+    background-color: #889498;
+    border-radius: 7px;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+.submit:hover{
+    color: darkred;
 }
 
 label{
-    font-size: 2.5vmin;
+    font-size: 3vmin;
+
 }
 
 .submit2{
@@ -55,4 +76,23 @@ h6{
     vertical-align: middle;
     width: 60vw;
     z-index: 1;
+}
+#datepicker{
+    display: block;
+    height: 3.5vmin;
+    width: 99%;
+    font-size: 2vmin;
+    box-sizing: content-box;
+
+}
+
+.submit2{
+    position:absolute;;
+    top:8vh;
+}
+
+input{
+    height: 3.3vh;
+    border: 1px solid black;
+    font-size: 2vmin;
 }

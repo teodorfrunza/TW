@@ -5,6 +5,15 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="iCalendar.css">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="jquery.min.js"></script>
+  <script src="jquery-ui.min.js"></script>
+
+  <script>
+      $(document).ready(function() {
+          $("#datepicker").datepicker();
+      });
+  </script>
 </head>
 
 <body>
@@ -16,18 +25,34 @@
 <h6>Generare iCalendar</h6>
 
 <form method="post" action="iCalendarDownload.php" class="formular">
-  <label>Cod detinut: </label>
-  <input type="text" name="cod" placeholder="Ex: 1012" required maxlength="15">
-  <input type="hidden" name="detinut_id" value="2017-1-16 9:00AM">
-  <input type="hidden" name="detinut_nume" value="2017-1-16 10:00AM">
-  <input type="hidden" name="detinut_prenume" value="123 Fake St, New York, NY">
-  <input type="hidden" name="durata_pedeapsa" value="This is my description">
-  <input type="hidden" name="cerere_vizita_id" value="This is my summary">
-  <input type="hidden" name="data_vizita_id" value="http://example.com">
+  <label>Cod detinut: </label><br>
+  <input type="text" name="cod" placeholder="Ex: 1012" maxlength="15" required>
+  <input type="hidden" name="detinut_id" value="1012">
+  <input type="hidden" name="detinut_nume" value="gigel">
+  <input type="hidden" name="detinut_prenume" value="gicutu">
+  <input type="hidden" name="durata_pedeapsa" value="10 ani">
+  <input type="hidden" name="cerere_vizita_id" value="4040">
+  <input type="hidden" name="data_vizita_id" value="02/22/2016">
+  <br>
+  <input type="submit" class="submit" value="Add to Calendar">
+</form>
+
+<form method="post" action="iCalendarDownload2.php" class="formular2">
+  <label>Data: </label>
+  <input id="datepicker" name="data" required>
+  <input type="hidden" name="vizita_id" value="2017-1-16 9:00AM">
+  <input type="hidden" name="nume_vizitator" value="2017-1-16 10:00AM">
+  <input type="hidden" name="prenume_vizitator" value="123 Fake St, New York, NY">
+  <input type="hidden" name="cnp_vizitator" value="This is my description">
+  <input type="hidden" name="cod_detinut" value="This is my summary">
+  <input type="hidden" name="relatie" value="http://example.com">
+  <input type="hidden" name="natura_vizita" value="http://example.com">
+  <input type="hidden" name="data_vizita" value="http://example.com">
+  <input type="hidden" name="ora" value="http://example.com">
+  <input type="hidden" name="poza" value="http://example.com">
   <br>
   <input type="submit" class="submit2" value="Add to Calendar">
 </form>
-
 
 </body>
 </html>
