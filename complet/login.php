@@ -33,13 +33,18 @@ if (!$r) {
 }
 $row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS);
 $count = $row['count'];
-if ($count == 1) {
+if ($count == 1 && $var1 != 'admin') {
 	session_start();
 	$_SESSION['login_user'] = $var1;
     header("location: employPanel.html");
 }
-else{
-
+else if (($count == 1 && $var1 == 'admin'))
+    {
+        session_start();
+        $_SESSION['login_user'] = $var1;
+        header("location: adminPanel.html");
+    }
+    else{
     $message = "Nume sau parola gresita. Va rog incercati din nou!";
     echo "<script type='text/javascript'>alert('$message'); window.location.href = \"angajati.html\";</script>";
 }

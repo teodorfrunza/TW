@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iCalendar</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="iCalendar.css">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+</head>
+
+<body>
+
+<div class="Container">
+  <img class="Poza" src="sters.jpg" alt="Prison image">
+</div>
+
+<h6>Generare iCalendar</h6>
+
+<form method="post" action="iCalendarDownload.php" class="formular">
+  <label>Cod detinut: </label>
+  <input type="text" name="cod" placeholder="Ex: 1012" required maxlength="15">
+  <input type="hidden" name="detinut_id" value="2017-1-16 9:00AM">
+  <input type="hidden" name="detinut_nume" value="2017-1-16 10:00AM">
+  <input type="hidden" name="detinut_prenume" value="123 Fake St, New York, NY">
+  <input type="hidden" name="durata_pedeapsa" value="This is my description">
+  <input type="hidden" name="cerere_vizita_id" value="This is my summary">
+  <input type="hidden" name="data_vizita_id" value="http://example.com">
+  <br>
+  <input type="submit" class="submit2" value="Add to Calendar">
+</form>
+
+
+</body>
+</html>
