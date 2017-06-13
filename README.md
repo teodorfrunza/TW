@@ -6,3 +6,6 @@ Sa se dezvolte o aplicatie Web pentru gestiunea vizitelor de care beneficiaza pe
 
 -> https://tools.ietf.org/html/rfc5545
 -> http://profs.info.uaic.ro/~busaco/teach/courses/cliw/web-film.html#week5
+
+# Trello
+-> https://trello.com/b/YVQoDG13/proiect-tw
