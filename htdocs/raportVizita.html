@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Raport vizita</title>
+    <link rel="stylesheet" type="text/css" href="css/raportVizita.css">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+</head>
+
+<body>
+<div class="Container">
+    <form action="php/raportVizita.php" method="POST">
+        <label><b>Cod vizita:</b></label>
+        <input type="text" name="cod" placeholder="Ex: 13233" required>
+        <br><br>
+        <label><b>Rezumatul discutiei:</b></label>
+        <textarea maxlength="200" name="rezumat" required></textarea>
+        <br><br>
+        <label><b>Durata conversatiei:</b></label>
+        <input type="text" name="ore" placeholder="Ex: 3 ore" required>
+        <br><br>
+        <label><b>Obiecte date de catre vizitator:</b></label>
+        <input type="text" name="ob1" placeholder="Ex: un pachet de tigari">
+        <br><br>
+        <label><b>Obiecte date de catre condamnat:</b></label>
+        <input type="text" name="ob2" placeholder="Ex: mesaj prietenului X">
+        <br><br>
+        <label><b>Starea de spirit:</b></label>
+        <input type="text" name="spirit" placeholder="Ex: calm, vesel" required>
+        <input type="submit" class="submit" value="Salveaza">
+    </form>
+    <img class="Poza" src="poze/backgroundSters.jpg" alt="Imagine inchisoare">
+</div>
+</body>
+
+</html>
