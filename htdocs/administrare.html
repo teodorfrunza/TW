@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AdministrareBD</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/administrare.css">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+</head>
+
+<body>
+<div class="Container">
+    <img class="Poza" src="poze/backgroundSters.jpg" alt="Imagine inchisoare">
+    <h1> Administrare BD </h1>
+
+    <div class="Container3">
+        <a href="Rolland/detinutiDB.php"> Vizionare detinuti </a>
+    </div>
+
+    <div class="Container4">
+        <a href="Rolland/orar.php"> Orar ziua curenta </a>
+    </div>
+	
+	<form method="POST" action="Rolland/complexSearch.php" class="Container2">
+        <label><b>Data1:</b></label>
+        <br>
+        <input type="text" placeholder="FORMAT: LL/DD/AAAA" name="data1">
+        <br>
+        <label><b>Data2:</b></label>
+        <br>
+        <input type="text" placeholder="FORMAT: LL/DD/AAAA" name="data2">
+        <br>
+        <label><b>Cod Detinut:</b></label>
+        <br>
+        <input type="text" placeholder="Ex: 1234" name="cod">
+        <br>
+        <input class="trimite" type="submit" value="Trimite">
+	</form>
+</div>
+</body>
+
+</html>
+
